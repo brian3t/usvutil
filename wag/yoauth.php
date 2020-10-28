@@ -155,7 +155,7 @@ if( ! $access_token ) {
   $request_token = NULL;
 
   try {
-    $response = $o->getRequestToken( "https://api.login.yahoo.com/oauth/v2/get_request_token", 'oob' );
+    $response = $o->getRequestToken( "https://api.login.yahoo.com/oauth2/request_auth", 'oob' );
     $request_token = $response['oauth_token'];
     $request_secret = $response['oauth_token_secret'];
 
