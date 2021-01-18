@@ -12,6 +12,7 @@ const mm = use('moment')
 const Database = use('Database')
 const FTIP_URL = 'https://lookup.decisionresourcesgroup.com/lookup/plans.json?state_id=' //must concat state_id here
 // const State = use('App/Models/State')
+const Plan2 = use('App/Models/Plan2')
 const Plan2State = use('App/Models/Plan2State')
 const STATES = [1, 2, 3, 4, 6, 7, 8, 9, 10, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 33, 34
   , 35, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 55, 56, 57, 58]
@@ -37,6 +38,7 @@ class ScrFtPlanByState extends Command {
         await _.forIn(plans, async (plans_in_type, cur_type) => {//for each block in results slider
           await plans_in_type.forEach(async (plan, i) => {
             let payload = {plan2_id: plan.id, state_id: STATE}
+            let plan2_m = await Plan2.findOrCreate({id: plan.id}, {id: plan.id, name: plan.name, lives: plan.lives})
             let plan2_state_m = await Plan2State.findOrCreate(payload, payload)
             if (! plan2_state_m instanceof Plan2State) return false
             /** @type Plan2State plan_m */
