@@ -64,7 +64,11 @@ module.exports = {
       port: Env.get('DB_PORT', ''),
       user: Env.get('DB_USER', 'wag'),
       password: Env.get('DB_PASSWORD', 'wTrapok)1'),
-      database: Env.get('DB_DATABASE', 'wag')
+      database: Env.get('DB_DATABASE', 'wag'),
+      pool: {
+        min: 2,
+        max: 20,
+      },
     }
   },
 

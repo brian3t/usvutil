@@ -10,7 +10,7 @@ const axios = use('axios').default
 const _ = use('lodash')
 const mm = use('moment')
 const Database = use('Database')
-const FTIP_URL = 'https://lookup.decisionresourcesgroup.com/lookup/plans.json?state_id=' //must concat state_id here
+const FTIP_URL = 'https://lookup.decisionresourcesgroup.com/lookup/results.json?drug_ids[]='//4138&health_plan_ids[]=447 //must concat state_id here
 // const State = use('App/Models/State')
 const Plan2 = use('App/Models/Plan2')
 const Plan2State = use('App/Models/Plan2State')

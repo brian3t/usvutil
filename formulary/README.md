@@ -1,6 +1,6 @@
-# TOTOSG Adonis fullstack application
+# Formulary Adonis fullstack application
 
-This is the fullstack app for TOTOSG mobile app, it comes pre-configured with:
+This is the fullstack app for Formulary mobile app, it comes pre-configured with:
 
 1. Bodyparser
 2. Session
@@ -31,5 +31,10 @@ adonis migration:run
 ```
 
 ### Console app:
-- to pull toto results into database `lot`, run: `node ace src_sg_pools` 
+- to pull into `formulary`, run: `node ace scr_ft_plan_by_state` 
 - 
+
+
+### Status
+As of 1/17 21:18
+plan2 : 5,037 records; plan2_state: 59,387
