@@ -9,6 +9,10 @@
   "author": "Brian3t",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
     "puppeteer": "^9.1.1"
-  }
+  },
+  "devDependencies": {}
 }
